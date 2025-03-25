@@ -2,9 +2,9 @@ import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema(
   {
-    clerkId: { type: String, required: true, unique: true }, // Store Clerk ID separately
+    _id: { type: String, required: true }, 
     name: { type: String, required: true },
-    email: { type: String, required: true, unique: true }, // Emails should be unique
+    email: { type: String, required: true}, 
     imageUrl: { type: String, required: true },
     enrolledCourses: [
       {
